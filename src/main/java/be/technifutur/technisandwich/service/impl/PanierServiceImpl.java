@@ -137,7 +137,7 @@ public class PanierServiceImpl implements PanierService {
         sandwich.setName(form.getName());
         sandwich.setPrice(form.getPrice());
         sandwich.setDescription(form.getDescription());
-//        sandwich.setIngredients(form.toEntity().getIngredients());
+//
 
         sandwichRepository.save(sandwich);
 

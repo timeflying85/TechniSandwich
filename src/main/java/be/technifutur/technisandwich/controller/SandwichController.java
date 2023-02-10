@@ -42,7 +42,7 @@ public class SandwichController {
 
     }
 
-    @GetMapping("/{id:[0-9]+}/delete")
+    @DeleteMapping("/{id:[0-9]+}")
     public void delete(@PathVariable long id){
 
         service.delete(id);

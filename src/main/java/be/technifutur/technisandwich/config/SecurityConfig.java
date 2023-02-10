@@ -44,12 +44,12 @@ public class SecurityConfig {
                     .requestMatchers(HttpMethod.POST, "/auth/*").anonymous()
                     .requestMatchers(request -> request.getRequestURI().length() > 50).hasRole(("ADMIN"))
 
-//                    .requestMatchers(HttpMethod.GET, "/sand/*")
-//                    .hasAnyRole("USER", "ADMIN")
+                    .requestMatchers(HttpMethod.GET, "/sand/*")
+                    .hasAnyRole("USER", "ADMIN")
 //                    .requestMatchers(HttpMethod.POST).hasRole("ADMIN")
 //                    .requestMatchers( HttpMethod.PUT ).hasRole("ADMIN")
 //                    .requestMatchers( HttpMethod.PATCH ).hasRole("ADMIN")
-//                    .requestMatchers( HttpMethod.DELETE ).hasRole("ADMIN")
+                    .requestMatchers( HttpMethod.DELETE , "/user/**").hasRole("ADMIN")
                     .anyRequest().permitAll();
         });
 

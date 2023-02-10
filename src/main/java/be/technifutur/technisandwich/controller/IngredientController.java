@@ -45,7 +45,7 @@ public class IngredientController {
     }
 
 
-    @GetMapping("/{id:[0-9]+}/delete")
+    @DeleteMapping("/{id:[0-9]+}")
     public void delete(@PathVariable long id){
 
         ingredientService.delete(id);

@@ -20,7 +20,6 @@ public class UserController {
         this.userService = userService;
     }
 
-
     @PostMapping("/add")
     public void create(@RequestBody @Valid UserInsertForm form){
 
@@ -45,7 +44,7 @@ public class UserController {
 
 
 
-    @GetMapping("/{id:[0-9]+}/delete")
+    @DeleteMapping("/{id:[0-9]+}")
     public void delete(@PathVariable long id){
 
         userService.delete(id);
